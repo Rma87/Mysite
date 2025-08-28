@@ -7,6 +7,6 @@ from blog.models import Post
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_date'
-    list_display = ('title', 'status', 'id', 'created_date', 'updated_date')
-    search_fields = ('title', 'content')
+    list_display = ('title','author', 'status', 'id', 'created_date', 'updated_date')
+    search_fields = ('title', 'author')
     list_filter = ('status', 'published_date')
